@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Journal</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <style type="text/css">
+
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar-wrapper">
+      <nav class="navbar">
+        <img id="nav-icon" src="https://i.pinimg.com/originals/24/b2/3b/24b23bfb68024defe2ee7ddeb1d668a8.png">
+        <a class="nav-link" <%= link_to 'Home', home_path %></a>
+        <a class="nav-link" <%= link_to 'About', about_path %></a>
+        <a class="nav-link" <%= link_to 'Entries', entries_path %></a>
+        <a class="nav-link" <%= link_to 'Version Control', version_path %></a>
+      </nav>
+
+      <div class="home-new-wrapper">
+        <span class="home-new-text home-new"> Write an entry for today? > <br> 
+        <strong><%= DateTime.now.strftime('%A, %b. %d %Y') %></strong></span>
+        <a class="nav-link home-new-link"> 
+          <%= link_to new_entry_path do %>
+            <%= image_tag "https://cdn3.iconfinder.com/data/icons/relaxation-techniques/256/Keep_a_journal-512.png", class: "home-new-icon" %> 
+          <% end %>
+          </a>
+      </div>
+    </div>
+
+    <div class="container">
+    <%= yield %>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer-container">
+
+        <div class="footer-block">
+          <div class="footer-header">Tagebuch Creation </div> 
+          <div class="footer-text"> Developed using Ruby on Rails </div>
+        </div>
+
+        <div class="footer-block">
+          <div class="footer-header">Discover More </div>
+          <div class="footer-text"> Head over to > <%= link_to "My Portfolio", "https://github.com/giddygarcia", :target => "_blank" %>
+          </div>
+        </div>
+
+        <div class="footer-block">
+          <div class="footer-header">Resources</div> 
+          <div class="footer-text"> 
+            <li>CS 129.18</li>
+            <li>CS 150</li>
+            <li>CS 150</li>
+            <li>CS 150</li>
+            <li>CS 150</li>
+
+          </div>
+        </div>
+
+      </div>
+        <div class="footer-solo">
+          Copyright &copy; 2019 Giddy Garcia
+        </div>
+    </div>
+  </body>
+</html>

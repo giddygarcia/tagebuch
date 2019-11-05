@@ -1,0 +1,43 @@
+<%= form_with(model: entry, local: true) do |form| %>
+  <% if entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+      <% entry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form">
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, :class => 'form-date form-input'  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quote %>
+    <%= form.text_field :quote, :class => 'form-quote form-input'  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :entry %>
+    <%= form.text_area :entry, :class=>'form-entry form-input' %>
+  </div>
+
+  <div class="field" id="form-tags">
+    <%= form.label :tags %>
+    <%= form.text_area :tags %>
+  </div>
+
+  <div class="field" id="form-image">
+    <%= form.label :image %>
+    <%= form.file_field :image, multiple: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+</div>
+<% end %>
