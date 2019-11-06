@@ -1,6 +1,9 @@
 # tagebuch
-'tagebuch' = a German word for 'journal'  
-Made for personal use yet distribution if others would like a Journal app as well.  
+> 'tagebuch' = a German word for 'journal'  
+
+**Currently in development during free time**   <br> 
+
+*Made for personal use yet distribution if others would like a Journal app as well.*  
   
 ### Ruby version   
 - Ruby 2.6.3  
