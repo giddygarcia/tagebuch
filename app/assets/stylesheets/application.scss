@@ -14,13 +14,12 @@
  *= require_self
  */
 
-
 body {
   background-color: #5cdb94;
   color: #FFFFFF;
   margin: 0 auto;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 13pt;
   line-height: 18px;
 }
 
@@ -44,6 +43,9 @@ body {
   font-weight: 900;
   font-size: 14pt;
 }
+#index-header {
+  color: #111111;
+}
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -60,6 +62,7 @@ pre {
   color: #05396b;
   border-top: 10px solid #05396b;
   margin-bottom: 40px;
+  font-size: 11pt;
 
 }
 
@@ -72,26 +75,38 @@ pre {
   display: inline-block;
   border-radius: 20px;
   padding: 10px;
+  height: 65px;
 }
 .home-new-text {
-  margin: 10px 20px 0 0;  
+  padding: 10px 110px 0 0;
+  line-height: 2em;  
 }
-.home-new-icon {
-  height: 40px;
-  width: 40px;
+.home-icon-wrapper {
   top: 10%;
   right: 5%;
   position: absolute;
+}
+.new-icon {
+  margin: 0 22px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+.new-entry-wrapper {
   background-color: #ffdd57;
-  color: #05396b;
   border-radius: 5px;
-  margin: 0px;
+  padding: 3px;
+  height: 60px;
+  width: 82px;
+  font-size: 12pt;
+  color: #05396b;
+  text-align: center;
 }
 
 .navbar {
   margin: 10px;
   display: inline-block;
-
 }
 #nav-icon {
   height: 50px;
@@ -112,7 +127,7 @@ a {
 }
 
 a:hover, a:focus {
-    background-size: 100% 2px;
+  background-size: 100% 2px;
 }
 
 th {
@@ -166,60 +181,140 @@ label {
   display: block;
 }
 
-.footer-wrapper {
-  min-width: 100%;
-  height: auto;
-  background-color: #001f3f;
-  padding: 20px 0 0 0;
-  margin: 40px auto 0 auto;
-  flex-direction:column;
-  overflow:hidden;
-
-}
-
-.footer-container {
-  display: flex;
-  text-align: center;
-  width: 80%;
-  color: white;
-  margin: 0 auto;
-  flex: 1;
-}
-
-.footer-block {
-  display: inline-block;
-  box-sizing: border-box;
-  margin: 0 60px 0 auto;
-  width: 20%;
-  text-align: left;
-}
-
-.footer-header {
-    font-size: 11pt;
-  font-family: 'Petit Formal Script', cursive;
-  font-weight: 900;
-  color: #5cdb94;
-
-}
-
-.footer-solo {
-  margin: 20px 0 10px 0;
-  text-align: center;
-  width: 100%;
-  font-size: 8pt;
-}
-
 .form-entry {
-  width: 500px;
-  height: 300px;
+  width: 80%;
+  min-height:11em;
   font-weight: 520;
-  font-size: 12pt;
-
+  font-size: 13pt;
 }
 
 .form-input {
   color: #05396b;
   font-family: 'Merriweather', serif;
   background-color: PapayaWhip;
-	
+  padding: 5px;
+}
+
+.form-quote-label {
+    text-align: center;
+
+}
+.form-quote, .table-quote {
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 2.5em;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bolder;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 14pt;
+}
+.table {
+  margin: 0 auto;
+  width: 100%;
+}
+tr {
+  display: table;
+  margin-bottom: 10px;
+}
+.table-date {
+    border-top: 1px solid currentColor;
+
+}
+.table-quote {
+  color: #111111;
+  border-left: 3px solid currentColor;
+  padding: 0 10px;
+}
+.table-entry {
+  font-size: 12pt;
+}
+.table-image img {
+  width: 300px;
+}
+.crud-div {
+  border-bottom: 3px solid #111111;
+  padding-bottom: 70px;
+}
+.crud-icon {
+  max-height: 25px;
+}
+.table-destroy a {
+  background-image: linear-gradient(#FF4136, #FF4136);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+}
+
+.table-destroy a:hover, .table-destroy a:focus {
+  background-size: 100% 2px;
+}
+
+.form-tags {
+  line-height: 1em;
+  height: 6em;
+}
+.form-image {
+}
+input[type="submit"] {
+  font-size: 14pt;
+  color: #ffdd57;
+  background-color: #05396b;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  float: right;
+  padding: 1em;
+}
+input[type="submit"]:hover {
+  color: #05396b;
+  background-color: #ffdd57;
+  cursor: pointer; 
+}
+
+
+.footer-wrapper {
+  min-width: 100%;
+  height: auto;
+  background-color: #001f3f;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  width: 70%;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.footer-block {
+  text-align: left;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 40%;
+  float: left;
+  margin-right: 30px;
+  font-size: 11pt;
+}
+
+.footer-header {
+  font-size: 13pt;
+  font-family: 'Petit Formal Script', cursive;
+  font-weight: 900;
+  color: #5cdb94;
+  margin-bottom: 5px;
+}
+
+.footer-solo {
+  margin: 20px 0 10px 0;
+  text-align: center;
+  width: 100%;
+  font-size: 9pt;
 }

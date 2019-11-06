@@ -9,6 +9,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+
     <style type="text/css">
 
     </style>
@@ -24,14 +27,15 @@
         <a class="nav-link" <%= link_to 'Version Control', version_path %></a>
       </nav>
 
-      <div class="home-new-wrapper">
-        <span class="home-new-text home-new"> Write an entry for today? > <br> 
-        <strong><%= DateTime.now.strftime('%A, %b. %d %Y') %></strong></span>
-        <a class="nav-link home-new-link"> 
+      <div class="home-new-wrapper ">
+        <span class="home-new-text"> Write an entry for today? > <br> 
+        <strong class="home-new-date"><%= DateTime.now.strftime('%A, %b. %d %Y') %></strong></span>
+        <div class="home-icon-wrapper new-entry-wrapper">
           <%= link_to new_entry_path do %>
-            <%= image_tag "https://cdn3.iconfinder.com/data/icons/relaxation-techniques/256/Keep_a_journal-512.png", class: "home-new-icon" %> 
+            New Entry
+            <%= image_tag "https://cdn3.iconfinder.com/data/icons/relaxation-techniques/256/Keep_a_journal-512.png", class: "new-icon" %> 
           <% end %>
-          </a>
+          </div>
       </div>
     </div>
 
@@ -56,12 +60,9 @@
         <div class="footer-block">
           <div class="footer-header">Resources</div> 
           <div class="footer-text"> 
-            <li>CS 129.18</li>
-            <li>CS 150</li>
-            <li>CS 150</li>
-            <li>CS 150</li>
-            <li>CS 150</li>
-
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
           </div>
         </div>
 
