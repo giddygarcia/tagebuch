@@ -1,0 +1,16 @@
+<p id=”alert”><%= alert %></p>
+<h1>Login</h1>
+
+<%= form_for(:session, :html => {role: "form"}, url: login_path) do |u| %>
+  <div class="field">
+    <%= u.label :username %>
+    <%= u.text_field :username %>
+  </div>
+  <div class="field">
+    <%= u.label :password %>
+    <%= u.password_field :password %>
+  </div>
+  <div class="field">
+    <%= u.submit "Log in" %>
+  </div>
+<% end %>

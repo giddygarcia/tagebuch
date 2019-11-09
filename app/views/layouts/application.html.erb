@@ -24,6 +24,13 @@
         <a class="nav-link" <%= link_to 'Home', home_path %></a>
         <a class="nav-link" <%= link_to 'About', about_path %></a>
         <a class="nav-link" <%= link_to 'Entries', entries_path %></a>
+        <a class="nav-link" <%= link_to 'Sign Up', new_user_path %></a>
+        <a class="nav-link" <%= link_to 'Log In', login_path %></a>
+
+        <% if logged_in? %>
+        <a class="nav-link" <%= link_to 'Log Out', logout_path, method: :delete %></a>
+        <% end %>
+
         <a class="nav-link" <%= link_to 'Version Control', version_path %></a>
       </nav>
 
